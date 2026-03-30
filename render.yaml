@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: youtubelock-worker
+    runtime: docker
+    dockerfilePath: ./worker/Dockerfile
+    dockerContext: ./worker
+    plan: free
+    envVars:
+      - key: DOWNLOAD_DIR
+        value: /app/downloads
